@@ -16,6 +16,7 @@ spl_autoload_register(function (string $class): void {
         'auth\\controllers\\'    => $rootDir . '/app/controller/',
         'utils\\'                => $rootDir . '/app/utils/',
         'routes\\'               => $rootDir . '/app/routes/',
+        'app\\controller\\'      => $rootDir . '/app/controller/',
     ];
 
     $class = ltrim($class, '\\');
@@ -44,6 +45,8 @@ spl_autoload_register(function (string $class): void {
             $dir . $snakeName . '.php',
             $dir . $camelName . '.php',
             $dir . $shortName . '.php',
+            // Fichiers renommés en xxxController.php (PR #101)
+            $dir . $shortName . 'Controller.php',
         ];
 
         foreach ($candidates as $file) {

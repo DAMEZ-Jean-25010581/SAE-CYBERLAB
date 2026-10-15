@@ -11,11 +11,11 @@ class Web
     public function __construct()
     {
         Route::add('/', function () {
-            (new \SAE_PHP\controllers\HomeController())->execute();
+            (new \SAE_PHP\controllers\home())->execute();
         });
 
         Route::add('/home', function () {
-            (new \SAE_PHP\controllers\HomeController())->execute();
+            (new \SAE_PHP\controllers\home())->execute();
         });
 
         Route::add('/login', function () {
@@ -49,7 +49,7 @@ class Web
         });
 
         Route::add('/contact', function () {
-            (new \SAE_PHP\controllers\ContactController())->contact();
+            (new \SAE_PHP\controllers\contact())->contact();
         });
 
         Route::add('/mentions-legales', function () {

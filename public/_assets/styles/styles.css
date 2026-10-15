@@ -253,7 +253,7 @@ main a:hover {
 }
 
 .description p,
-p.description, .description span {
+p.description {
     font-family:'Chakra Petch',sans-serif;
     font-weight:200;
     max-width: 60rem;
@@ -263,6 +263,18 @@ p.description, .description span {
     color:white;
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
     line-height: 1.7;
+}
+
+/* Mots de la description : même police que le paragraphe, sans ses marges */
+.description span {
+    font-family:'Chakra Petch',sans-serif;
+    font-weight:200;
+}
+
+/* « cybersécurité » et « attaques » en vert */
+.description .green-word,
+.description .blue-word {
+    color:#5FF6AD;
 }
 
 .about-text {

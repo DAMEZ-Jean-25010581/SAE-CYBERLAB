@@ -33,11 +33,17 @@ spl_autoload_register(function (string $class): void {
         $relativePath = str_replace('\\', '/', substr($class, strlen($prefix)));
         $className = basename($relativePath);
         $snakeName = strtolower(preg_replace('/(?<!^)[A-Z]/', '_$0', $className));
+        // Fichiers nommés en camelCase (forgotPassword.php), avec ou sans le suffixe
+        // « Controller » (ContactController -> contact.php). Linux respecte la casse.
+        $camelName = lcfirst($className);
+        $shortName = lcfirst(preg_replace('/Controller$/', '', $className));
 
         $candidates = [
             $dir . $relativePath . '.php',
             $dir . $className . '.php',
             $dir . $snakeName . '.php',
+            $dir . $camelName . '.php',
+            $dir . $shortName . '.php',
         ];
 
         foreach ($candidates as $file) {

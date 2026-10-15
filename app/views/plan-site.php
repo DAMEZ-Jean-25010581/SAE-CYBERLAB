@@ -25,7 +25,13 @@
                 <h2>Compte utilisateur</h2>
                 <ol class="toc-items">
                     <?php if (\Utils\SessionHelpers::isLogin()): ?>
-                        <li><a href="/logout">Se déconnecter</a></li>
+                        <li><a href="/account">Mon compte</a></li>
+                        <li>
+                            <form action="/logout" method="post" class="sitemap-logout-form">
+                                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\Utils\Csrf::generateToken(), ENT_QUOTES, 'UTF-8') ?>">
+                                <button type="submit">Se déconnecter</button>
+                            </form>
+                        </li>
                     <?php else: ?>
                         <li><a href="/login">Se connecter</a></li>
                         <li><a href="/register">S'inscrire</a></li>

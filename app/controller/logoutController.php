@@ -1,8 +1,7 @@
 <?php
 
-namespace Auth\Controllers\Logout;
+namespace SAE_PHP\controllers;
 
-use Auth\Controllers\RequestInput;
 use Utils\Csrf;
 
 class Logout

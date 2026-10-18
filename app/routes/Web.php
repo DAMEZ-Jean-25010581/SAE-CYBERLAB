@@ -19,27 +19,27 @@ class Web
         });
 
         Route::add('/login', function () {
-            (new \Auth\Controllers\Login\Login())->execute();
+            (new \SAE_PHP\controllers\Login())->execute();
         });
 
         Route::add('/register', function () {
-            (new \Auth\Controllers\Register\Register())->execute();
+            (new \SAE_PHP\controllers\Register())->execute();
         });
 
         Route::add('/logout', function () {
-            (new \Auth\Controllers\Logout\Logout())->execute();
+            (new \SAE_PHP\controllers\Logout())->execute();
         });
 
         Route::add('/forgot_password', function () {
-            (new \Auth\Controllers\ForgotPassword\ForgotPassword())->execute();
+            (new \SAE_PHP\controllers\ForgotPassword())->execute();
         });
 
         Route::add('/reset_password', function () {
-            (new \Auth\Controllers\ResetPassword\ResetPassword())->execute();
+            (new \SAE_PHP\controllers\ResetPassword())->execute();
         });
 
         Route::add('/account', function () {
-            (new \Auth\Controllers\Account\Account())->execute();
+            (new \SAE_PHP\controllers\Account())->execute();
         });
 
         Route::add('/a-propos', function () {

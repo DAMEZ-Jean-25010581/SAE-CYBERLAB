@@ -1,6 +1,6 @@
 <?php
 
-namespace Auth\Controllers;
+namespace SAE_PHP\controllers;
 
 trait RequestInput
 {

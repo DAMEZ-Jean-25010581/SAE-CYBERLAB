@@ -1,12 +1,9 @@
 <?php
 
-namespace Auth\Controllers\Account;
+namespace SAE_PHP\controllers;
 
-use Auth\Controllers\Logout\Logout;
-use Auth\Controllers\Register\Register;
-use Auth\Controllers\RequestInput;
 use Includes\Database\DatabaseConnection;
-use Auth\Model\User\UserRepository;
+use SAE_PHP\models\UserRepository;
 use PDOException;
 use SAE_PHP\models\Exceptions\UserException;
 use Utils\Csrf;

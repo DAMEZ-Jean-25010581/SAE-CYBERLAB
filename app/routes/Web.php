@@ -49,7 +49,7 @@ class Web
         });
 
         Route::add('/contact', function () {
-            (new \app\controller\ContactController())->contact();
+            (new \SAE_PHP\controllers\ContactController())->contact();
         });
 
         Route::add('/mentions-legales', function () {

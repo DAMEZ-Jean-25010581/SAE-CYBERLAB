@@ -1,5 +1,5 @@
 <?php
-namespace app\controller;
+namespace SAE_PHP\controllers;
 
 use Utils\Template;
 use Utils\Csrf;

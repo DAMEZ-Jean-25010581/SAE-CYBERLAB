@@ -10,13 +10,11 @@ spl_autoload_register(function (string $class): void {
     ];
 
     $prefixes = [
-        'sae_php\\controllers\\' => $rootDir . '/app/controller/',
+        'sae_php\\controllers\\' => $rootDir . '/app/controllers/',
         'sae_php\\views\\'       => $rootDir . '/app/views/',
         'sae_php\\models\\'      => $rootDir . '/app/models/',
-        'auth\\controllers\\'    => $rootDir . '/app/controller/',
         'utils\\'                => $rootDir . '/app/utils/',
         'routes\\'               => $rootDir . '/app/routes/',
-        'app\\controller\\'      => $rootDir . '/app/controller/',
     ];
 
     $class = ltrim($class, '\\');

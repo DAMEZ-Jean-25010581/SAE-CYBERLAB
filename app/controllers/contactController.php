@@ -4,6 +4,7 @@ namespace SAE_PHP\controllers;
 use Utils\Template;
 use Utils\Csrf;
 use Includes\Database\DatabaseConnection;
+use SAE_PHP\views\ContactView;
 
 class ContactController
 {
@@ -70,7 +71,7 @@ class ContactController
         }
 
         // affichage vue contact
-        Template::render('contactView', [
+        Template::render(ContactView::class, [
             'title'   => 'CyberLab - Contact',
             'erreurs' => $erreurs,
             'succes'  => $succes,

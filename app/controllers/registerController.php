@@ -9,6 +9,7 @@ use SAE_PHP\models\Exceptions\UserException;
 use Utils\Csrf;
 use Utils\SessionHelpers;
 use Utils\Template;
+use SAE_PHP\views\RegisterView;
 
 class Register
 {
@@ -54,7 +55,7 @@ class Register
             }
         }
 
-        Template::render('registerView', [
+        Template::render(RegisterView::class, [
             'title'    => 'CyberLab - Inscription',
             'error'    => $error,
             'username' => $username,

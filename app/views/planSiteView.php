@@ -1,3 +1,16 @@
+<?php
+
+namespace SAE_PHP\views;
+
+/**
+ * Plan du site (PlanSiteController).
+ */
+class PlanSiteView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        ?>
 <section class="sitemap" aria-labelledby="sitemap-title">
     
     <h1 class="subtitle">Plan du site</h1>
@@ -51,3 +64,6 @@
         </ol>
     </nav>
 </section>
+<?php
+    }
+}

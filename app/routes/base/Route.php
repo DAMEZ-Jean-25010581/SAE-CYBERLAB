@@ -2,7 +2,7 @@
 
 namespace routes\base;
 
-use Utils\Template;
+use SAE_PHP\controllers\ErrorController;
 use Utils\Csrf;
 
 class Route
@@ -37,9 +37,7 @@ class Route
                 if (!in_array($method, $route['methods'], true)) {
                     http_response_code(405);
                     header('Allow: ' . implode(', ', $route['methods']));
-                    Template::render('error', [
-                        'title' => 'CyberLab - Méthode non autorisée'
-                    ]);
+                    (new ErrorController())->execute('CyberLab - Méthode non autorisée');
                     return;
                 }
 
@@ -49,9 +47,7 @@ class Route
 
                     if (!is_string($token) || !Csrf::validateToken($token)) {
                         http_response_code(403);
-                        Template::render('error', [
-                            'title' => 'CyberLab - Requête refusée'
-                        ]);
+                        (new ErrorController())->execute('CyberLab - Requête refusée');
                         return;
                     }
                 }
@@ -62,9 +58,7 @@ class Route
                 } catch (\Throwable $e) {
                     error_log($e->getMessage()); // detail dans les logs serveur uniquement (pas d'affichage externe)
                     http_response_code(500);
-                    Template::render('error', [
-                        'title' => 'CyberLab - Erreur serveur'
-                    ]);
+                    (new ErrorController())->execute('CyberLab - Erreur serveur');
                 }
                 return;
             }
@@ -72,8 +66,6 @@ class Route
 
         // Si aucune route -> on affiche une page d'erreur 404
         http_response_code(404);
-        Template::render('errorView', [
-            'title' => 'CyberLab - Page non trouvée'
-        ]);
+        (new ErrorController())->execute('CyberLab - Page non trouvée');
     }
 }

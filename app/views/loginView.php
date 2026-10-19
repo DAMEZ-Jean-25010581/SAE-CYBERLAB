@@ -1,3 +1,19 @@
+<?php
+
+namespace SAE_PHP\views;
+
+/**
+ * Page de connexion (Login).
+ */
+class LoginView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        $error = $params['error'] ?? null;
+        $successMessage = $params['successMessage'] ?? null;
+        $identifier = $params['identifier'] ?? '';
+        ?>
 <div class="auth-wrapper">
     <div class="auth-card">
         <div class="auth-header">
@@ -22,7 +38,7 @@
             
             <div class="auth-group">
                 <label for="identifier">PSEUDO OU EMAIL :</label>
-                <input type="text" id="identifier" name="identifier" required autocomplete="username" placeholder="Votre pseudo ou votre email" value="<?= htmlspecialchars($identifier ?? '', ENT_QUOTES, 'UTF-8') ?>">
+                <input type="text" id="identifier" name="identifier" required autocomplete="username" placeholder="Votre pseudo ou votre email" value="<?= htmlspecialchars($identifier, ENT_QUOTES, 'UTF-8') ?>">
             </div>
 
             <div class="auth-group">
@@ -42,3 +58,6 @@
         </div>
     </div>
 </div>
+<?php
+    }
+}

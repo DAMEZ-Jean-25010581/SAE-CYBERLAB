@@ -1,3 +1,18 @@
+<?php
+
+namespace SAE_PHP\views;
+
+/**
+ * Mise en page commune à toutes les pages (appelée par Template).
+ */
+class LayoutView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        $title = $params['title'] ?? null;
+        $content = $params['content'] ?? '';
+        ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -90,3 +105,6 @@
     </footer>
 </body>
 </html>
+<?php
+    }
+}

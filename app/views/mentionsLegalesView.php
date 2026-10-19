@@ -1,3 +1,16 @@
+<?php
+
+namespace SAE_PHP\views;
+
+/**
+ * Mentions légales (MentionsLegalesController).
+ */
+class MentionsLegalesView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        ?>
 <section class="legal-notice" aria-labelledby="legal-title">
 <h1 id="legal-title" class="subtitle">Mentions légales</h1>
 <br>
@@ -40,3 +53,6 @@
 <p>Le présent site est soumis au droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
 </div>
 </section>
+<?php
+    }
+}

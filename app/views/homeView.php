@@ -1,3 +1,19 @@
+<?php
+
+namespace SAE_PHP\views;
+
+/**
+ * Page d'accueil avec le classement (HomeController).
+ */
+class HomeView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        $isLoggedIn = $params['isLoggedIn'] ?? false;
+        $players = $params['players'] ?? [];
+        $pagination = $params['pagination'] ?? null;
+        ?>
 <!-- UPPER SECTION -->
 <section>
     <h1 class="main-title">CYBERLAB</h1>
@@ -96,3 +112,6 @@
         <?php endif; ?>
     </section>
 </section>
+<?php
+    }
+}

@@ -1,3 +1,19 @@
+<?php
+
+namespace SAE_PHP\views;
+
+/**
+ * Nouveau mot de passe (ResetPassword).
+ */
+class ResetPasswordView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        $error = $params['error'] ?? null;
+        $token = $params['token'] ?? '';
+        $user = $params['user'] ?? null;
+        ?>
 <div class="auth-wrapper">
     <div class="auth-card">
         <div class="auth-header">
@@ -47,3 +63,6 @@
         </div>
     </div>
 </div>
+<?php
+    }
+}

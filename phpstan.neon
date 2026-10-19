@@ -3,7 +3,7 @@ parameters:
 
     paths:
         - public/index.php
-        - app/controller
+        - app/controllers
         - app/models
         - app/routes
         - app/views

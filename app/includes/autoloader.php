@@ -5,18 +5,16 @@ spl_autoload_register(function (string $class): void {
 
     $classMap = [
         'Includes\\Database\\DatabaseConnection' => __DIR__ . '/database.php',
-        'Auth\\Model\\User\\User'                => $rootDir . '/app/models/user.php',
-        'Auth\\Model\\User\\UserRepository'      => $rootDir . '/app/models/user.php',
+        'SAE_PHP\\models\\User'                  => $rootDir . '/app/models/user.php',
+        'SAE_PHP\\models\\UserRepository'        => $rootDir . '/app/models/user.php',
     ];
 
     $prefixes = [
-        'sae_php\\controllers\\' => $rootDir . '/app/controller/',
+        'sae_php\\controllers\\' => $rootDir . '/app/controllers/',
         'sae_php\\views\\'       => $rootDir . '/app/views/',
         'sae_php\\models\\'      => $rootDir . '/app/models/',
-        'auth\\controllers\\'    => $rootDir . '/app/controller/',
         'utils\\'                => $rootDir . '/app/utils/',
         'routes\\'               => $rootDir . '/app/routes/',
-        'app\\controller\\'      => $rootDir . '/app/controller/',
     ];
 
     $class = ltrim($class, '\\');

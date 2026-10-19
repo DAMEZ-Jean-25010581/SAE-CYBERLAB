@@ -1,10 +1,9 @@
 <?php
 
-namespace Auth\Controllers\ResetPassword;
+namespace SAE_PHP\controllers;
 
-use Auth\Controllers\RequestInput;
 use Includes\Database\DatabaseConnection;
-use Auth\Model\User\UserRepository;
+use SAE_PHP\models\UserRepository;
 use PDOException;
 use SAE_PHP\models\Exceptions\UserException;
 use Utils\Csrf;

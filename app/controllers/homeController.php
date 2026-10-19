@@ -2,7 +2,7 @@
 
 namespace SAE_PHP\controllers;
 
-use Auth\Model\User\UserRepository;
+use SAE_PHP\models\UserRepository;
 use Includes\Database\DatabaseConnection;
 use Utils\Pagination;
 use Utils\SessionHelpers;

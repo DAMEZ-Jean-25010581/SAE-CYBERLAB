@@ -1,6 +1,6 @@
 <?php
 
-namespace Auth\Model\User;
+namespace SAE_PHP\models;
 
 use PDO;
 use SAE_PHP\models\Exceptions\UserException;

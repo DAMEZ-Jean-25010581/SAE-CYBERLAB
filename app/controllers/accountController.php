@@ -9,6 +9,7 @@ use SAE_PHP\models\Exceptions\UserException;
 use Utils\Csrf;
 use Utils\SessionHelpers;
 use Utils\Template;
+use SAE_PHP\views\AccountView;
 
 class Account
 {
@@ -54,7 +55,7 @@ class Account
             exit;
         }
 
-        Template::render('accountView', [
+        Template::render(AccountView::class, [
             'title'          => 'CyberLab - Mon compte',
             'user'           => $user,
             'error'          => $error,

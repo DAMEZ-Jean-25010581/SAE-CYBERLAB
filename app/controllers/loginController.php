@@ -9,6 +9,7 @@ use SAE_PHP\models\Exceptions\UserException;
 use Utils\Csrf;
 use Utils\SessionHelpers;
 use Utils\Template;
+use SAE_PHP\views\LoginView;
 
 class Login
 {
@@ -70,7 +71,7 @@ class Login
             }
         }
 
-        Template::render('loginView', [
+        Template::render(LoginView::class, [
             'title' => 'CyberLab - Connexion',
             'error' => $error,
             'successMessage' => $this->notice(),

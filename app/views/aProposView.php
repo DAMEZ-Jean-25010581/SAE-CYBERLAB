@@ -1,3 +1,16 @@
+<?php
+
+namespace SAE_PHP\views;
+
+/**
+ * Page « À propos » (AProposController).
+ */
+class AProposView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        ?>
 <section class="about">
     <h1 class="main-title">CYBERLAB</h1>
     <p class="about-text">
@@ -12,3 +25,6 @@
         Nous ne sommes pas responsables des actions de nos utilisateurs qui viendraient déroger à nos consignes.
     </p>
 </section>
+<?php
+    }
+}

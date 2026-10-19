@@ -1,5 +1,19 @@
 <?php
-?>
+
+namespace SAE_PHP\views;
+
+/**
+ * Page d'inscription (Register).
+ */
+class RegisterView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        $error = $params['error'] ?? null;
+        $username = $params['username'] ?? '';
+        $email = $params['email'] ?? '';
+        ?>
 <div class="auth-wrapper">
     <div class="auth-card">
         <div class="auth-header">
@@ -18,12 +32,12 @@
             
             <div class="auth-group">
                 <label for="username">PSEUDO :</label>
-                <input type="text" id="username" name="username" required autocomplete="username" placeholder="Votre pseudo (3 à 30 caractères)" value="<?= htmlspecialchars($username ?? '', ENT_QUOTES, 'UTF-8') ?>">
+                <input type="text" id="username" name="username" required autocomplete="username" placeholder="Votre pseudo (3 à 30 caractères)" value="<?= htmlspecialchars($username, ENT_QUOTES, 'UTF-8') ?>">
             </div>
 
             <div class="auth-group">
                 <label for="email">ADRESSE EMAIL :</label>
-                <input type="email" id="email" name="email" required autocomplete="email" placeholder="votre.email@domaine.com" value="<?= htmlspecialchars($email ?? '', ENT_QUOTES, 'UTF-8') ?>">
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="votre.email@domaine.com" value="<?= htmlspecialchars($email, ENT_QUOTES, 'UTF-8') ?>">
             </div>
 
             <div class="auth-group">
@@ -52,3 +66,6 @@
         </div>
     </div>
 </div>
+<?php
+    }
+}

@@ -1,10 +1,22 @@
 <?php
 
-$email = $anciens['email'] ?? '';
-$objet = $anciens['objet'] ?? '';
-$message = $anciens['message'] ?? '';
+namespace SAE_PHP\views;
 
-?>
+/**
+ * Formulaire de contact (ContactController).
+ */
+class ContactView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        $erreurs = $params['erreurs'] ?? [];
+        $succes = $params['succes'] ?? false;
+        $anciens = $params['anciens'] ?? [];
+        $email = $anciens['email'] ?? '';
+        $objet = $anciens['objet'] ?? '';
+        $message = $anciens['message'] ?? '';
+        ?>
         <section class="contact">
             <h1 class="main-title">Contact</h1>
             <h2 class="subtitle">Une question ?</h2>
@@ -42,3 +54,6 @@ $message = $anciens['message'] ?? '';
                 <button type="submit" class="btn">Soumettre</button>
             </form>
         </section>
+<?php
+    }
+}

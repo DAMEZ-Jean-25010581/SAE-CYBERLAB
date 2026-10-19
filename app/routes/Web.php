@@ -4,7 +4,6 @@ namespace routes;
 
 use routes\base\Route;
 use Utils\SessionHelpers;
-use Utils\Template;
 
 class Web
 {
@@ -43,9 +42,7 @@ class Web
         }, ['GET', 'POST']);
 
         Route::add('/a-propos', function () {
-            Template::render('aProposView', [
-                'title' => 'CyberLab - À propos'
-            ]);
+            (new \SAE_PHP\controllers\AProposController())->execute();
         });
 
         Route::add('/contact', function () {
@@ -53,21 +50,23 @@ class Web
         }, ['GET', 'POST']);
 
         Route::add('/mentions-legales', function () {
-            Template::render('mentionsLegalesView', [
-                'title' => 'CyberLab - Mentions légales'
-            ]);
+            (new \SAE_PHP\controllers\MentionsLegalesController())->execute();
         });
 
         Route::add('/plan-site', function () {
-            Template::render('planSiteView', [
-                'title' => 'CyberLab - Plan du site'
-            ]);
+            (new \SAE_PHP\controllers\PlanSiteController())->execute();
         });
 
         Route::add('/plan-du-site', function () {
-            Template::render('planSiteView', [
-                'title' => 'CyberLab - Plan du site'
-            ]);
+            (new \SAE_PHP\controllers\PlanSiteController())->execute();
+        });
+
+        Route::add('/authentification', function () {
+            (new \SAE_PHP\controllers\AuthentificationController())->execute();
+        });
+
+        Route::add('/inscription', function () {
+            (new \SAE_PHP\controllers\InscriptionController())->execute();
         });
     }
 }

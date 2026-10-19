@@ -9,6 +9,7 @@ use Random\RandomException;
 use SAE_PHP\models\Exceptions\UserException;
 use Utils\Csrf;
 use Utils\Template;
+use SAE_PHP\views\ForgotPasswordView;
 
 class ForgotPassword
 {
@@ -48,7 +49,7 @@ class ForgotPassword
             }
         }
 
-        Template::render('forgotPasswordView', [
+        Template::render(ForgotPasswordView::class, [
             'title' => 'CyberLab - Récupération',
             'error' => $error,
             'successMessage' => $successMessage,

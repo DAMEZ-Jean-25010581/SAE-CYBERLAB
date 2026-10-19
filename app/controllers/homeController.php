@@ -7,6 +7,7 @@ use Includes\Database\DatabaseConnection;
 use Utils\Pagination;
 use Utils\SessionHelpers;
 use Utils\Template;
+use SAE_PHP\views\HomeView;
 
 /**
  * Page d'accueil avec le classement paginé des joueurs.
@@ -29,7 +30,7 @@ class HomeController
 
         $players = $userRepository->findRankingPage($pagination->getPerPage(), $pagination->getOffset());
 
-        Template::render('homeView', [
+        Template::render(HomeView::class, [
             'title'      => 'CyberLab - Accueil',
             'isLoggedIn' => SessionHelpers::isLogin(),
             'players'    => $players,

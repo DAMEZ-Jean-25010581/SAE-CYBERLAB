@@ -1,3 +1,20 @@
+<?php
+
+namespace SAE_PHP\views;
+
+/**
+ * Page « Mon compte » (Account).
+ */
+class AccountView implements ViewInterface
+{
+    /** @param array<string, mixed> $params */
+    public function render(array $params = []): void
+    {
+        $user = $params['user'] ?? null;
+        $error = $params['error'] ?? null;
+        $successMessage = $params['successMessage'] ?? null;
+        $csrfToken = $params['csrfToken'] ?? '';
+        ?>
 <div class="auth-wrapper">
     <div class="auth-card">
         <div class="auth-header">
@@ -126,3 +143,6 @@
         </section>
     </div>
 </div>
+<?php
+    }
+}

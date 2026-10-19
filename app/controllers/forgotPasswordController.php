@@ -48,7 +48,7 @@ class ForgotPassword
             }
         }
 
-        Template::render('forgot_password', [
+        Template::render('forgotPasswordView', [
             'title' => 'CyberLab - Récupération',
             'error' => $error,
             'successMessage' => $successMessage,

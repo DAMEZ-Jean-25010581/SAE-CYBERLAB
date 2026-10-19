@@ -70,7 +70,7 @@ class Login
             }
         }
 
-        Template::render('login', [
+        Template::render('loginView', [
             'title' => 'CyberLab - Connexion',
             'error' => $error,
             'successMessage' => $this->notice(),

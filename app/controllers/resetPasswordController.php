@@ -48,7 +48,7 @@ class ResetPassword
             }
         }
 
-        Template::render('reset_password', [
+        Template::render('resetPasswordView', [
             'title' => 'CyberLab - Nouveau mot de passe',
             'error' => $error,
             'token' => $token,

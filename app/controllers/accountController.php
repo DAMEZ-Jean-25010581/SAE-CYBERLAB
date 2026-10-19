@@ -54,7 +54,7 @@ class Account
             exit;
         }
 
-        Template::render('account', [
+        Template::render('accountView', [
             'title'          => 'CyberLab - Mon compte',
             'user'           => $user,
             'error'          => $error,

@@ -24,6 +24,6 @@ class Template
         $content = ob_get_clean();
 
         // On passe le contenu de la vue a la mise en page
-        include __DIR__ . '/../views/layout.php';
+        include __DIR__ . '/../views/layoutView.php';
     }
 }

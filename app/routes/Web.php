@@ -43,7 +43,7 @@ class Web
         });
 
         Route::add('/a-propos', function () {
-            Template::render('aPropos', [
+            Template::render('aProposView', [
                 'title' => 'CyberLab - À propos'
             ]);
         });
@@ -53,19 +53,19 @@ class Web
         });
 
         Route::add('/mentions-legales', function () {
-            Template::render('mentions-legales', [
+            Template::render('mentionsLegalesView', [
                 'title' => 'CyberLab - Mentions légales'
             ]);
         });
 
         Route::add('/plan-site', function () {
-            Template::render('plan-site', [
+            Template::render('planSiteView', [
                 'title' => 'CyberLab - Plan du site'
             ]);
         });
 
         Route::add('/plan-du-site', function () {
-            Template::render('plan-site', [
+            Template::render('planSiteView', [
                 'title' => 'CyberLab - Plan du site'
             ]);
         });

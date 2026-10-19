@@ -17,7 +17,7 @@ class Logout
 
         self::destroySession();
 
-        header('Location: /login?logout=success');
+        header('Location: /index.php?action=login&logout=success');
         exit;
     }
 

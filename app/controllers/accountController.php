@@ -23,7 +23,7 @@ class Account
     public function execute(): void
     {
         if (!SessionHelpers::isLogin()) {
-            header('Location: /login');
+            header('Location: /index.php?action=login');
             exit;
         }
 
@@ -50,7 +50,7 @@ class Account
 
         if ($user === null) {
             Logout::destroySession();
-            header('Location: /login');
+            header('Location: /index.php?action=login');
             exit;
         }
 
@@ -110,7 +110,7 @@ class Account
 
     private function redirect(string $updated): never
     {
-        header('Location: /account?updated=' . $updated);
+        header('Location: /index.php?action=account&updated=' . $updated);
         exit;
     }
 }

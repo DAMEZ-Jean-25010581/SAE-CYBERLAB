@@ -16,8 +16,8 @@
                             <li><a href="/#ranking">Classement</a></li>
                         </ol>
                     </li>
-                    <li><a href="/a-propos">À propos</a></li>
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="index.php?action=a-propos">À propos</a></li>
+                    <li><a href="index.php?action=contact">Contact</a></li>
                 </ol>
             </li>
 
@@ -25,17 +25,17 @@
                 <h2>Compte utilisateur</h2>
                 <ol class="toc-items">
                     <?php if (\Utils\SessionHelpers::isLogin()): ?>
-                        <li><a href="/account">Mon compte</a></li>
+                        <li><a href="index.php?action=account">Mon compte</a></li>
                         <li>
-                            <form action="/logout" method="post" class="sitemap-logout-form">
+                            <form action="/index.php?action=logout" method="post" class="sitemap-logout-form">
                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\Utils\Csrf::generateToken(), ENT_QUOTES, 'UTF-8') ?>">
                                 <button type="submit">Se déconnecter</button>
                             </form>
                         </li>
                     <?php else: ?>
-                        <li><a href="/login">Se connecter</a></li>
-                        <li><a href="/register">S'inscrire</a></li>
-                        <li><a href="/forgot_password">Mot de passe oublié</a></li>
+                        <li><a href="index.php?action=login">Se connecter</a></li>
+                        <li><a href="index.php?action=register">S'inscrire</a></li>
+                        <li><a href="index.php?action=forgot_password">Mot de passe oublié</a></li>
                     <?php endif; ?>
                 </ol>
             </li>
@@ -43,8 +43,8 @@
             <li class="toc-section">
                 <h2>Informations</h2>
                 <ol class="toc-items">
-                    <li><a href="/mentions-legales">Mentions légales</a></li>
-                    <li><a href="/plan-site" >Plan du site</a></li>
+                    <li><a href="index.php?action=mentions-legales">Mentions légales</a></li>
+                    <li><a href="index.php?action=plan-site" >Plan du site</a></li>
                 </ol>
             </li>
 

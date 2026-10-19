@@ -18,7 +18,7 @@ $message = $anciens['message'] ?? '';
                 <p class="erreur"><?= htmlspecialchars($erreur) ?></p>
             <?php endforeach; ?>
 
-            <form action="/contact" method="post" class="contact-form">
+            <form action="/index.php?action=contact" method="post" class="contact-form">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\Utils\Csrf::generateToken(), ENT_QUOTES, 'UTF-8') ?>">
                 <div class="form-row">
                     <div class="form-group">

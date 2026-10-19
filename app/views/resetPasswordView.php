@@ -12,7 +12,7 @@
         <?php endif; ?>
 
         <?php if ($user !== null): ?>
-            <form action="index.php?action=reset_password" method="post">
+            <form action="/index.php?action=reset_password" method="post">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\Utils\Csrf::generateToken(), ENT_QUOTES, 'UTF-8') ?>">
                 <input type="hidden" name="token" value="<?= htmlspecialchars($token, ENT_QUOTES, 'UTF-8') ?>">
 
@@ -38,12 +38,12 @@
             </form>
         <?php else: ?>
             <div class="auth-links">
-                <a href="index.php?action=forgot_password">Demander un nouveau lien</a>
+                <a href="/index.php?action=forgot_password">Demander un nouveau lien</a>
             </div>
         <?php endif; ?>
 
         <div class="auth-links">
-            Retour à la <a href="index.php?action=login">connexion</a>
+            Retour à la <a href="/index.php?action=login">connexion</a>
         </div>
     </div>
 </div>

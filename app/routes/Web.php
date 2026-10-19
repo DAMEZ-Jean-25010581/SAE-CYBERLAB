@@ -20,11 +20,11 @@ class Web
 
         Route::add('/login', function () {
             (new \SAE_PHP\controllers\Login())->execute();
-        });
+        }, ['GET', 'POST']);
 
         Route::add('/register', function () {
             (new \SAE_PHP\controllers\Register())->execute();
-        });
+        }, ['GET', 'POST']);
 
         Route::add('/logout', function () {
             (new \SAE_PHP\controllers\Logout())->execute();
@@ -32,15 +32,15 @@ class Web
 
         Route::add('/forgot_password', function () {
             (new \SAE_PHP\controllers\ForgotPassword())->execute();
-        });
+        }, ['GET', 'POST']);
 
         Route::add('/reset_password', function () {
             (new \SAE_PHP\controllers\ResetPassword())->execute();
-        });
+        }, ['GET', 'POST']);
 
         Route::add('/account', function () {
             (new \SAE_PHP\controllers\Account())->execute();
-        });
+        }, ['GET', 'POST']);
 
         Route::add('/a-propos', function () {
             Template::render('aProposView', [
@@ -50,7 +50,7 @@ class Web
 
         Route::add('/contact', function () {
             (new \SAE_PHP\controllers\ContactController())->contact();
-        });
+        }, ['GET', 'POST']);
 
         Route::add('/mentions-legales', function () {
             Template::render('mentionsLegalesView', [

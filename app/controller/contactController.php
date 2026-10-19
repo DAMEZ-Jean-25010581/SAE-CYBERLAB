@@ -70,7 +70,7 @@ class ContactController
         }
 
         // affichage vue contact
-        Template::render('contact', [
+        Template::render('contactView', [
             'title'   => 'CyberLab - Contact',
             'erreurs' => $erreurs,
             'succes'  => $succes,

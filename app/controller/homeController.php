@@ -29,7 +29,7 @@ class HomeController
 
         $players = $userRepository->findRankingPage($pagination->getPerPage(), $pagination->getOffset());
 
-        Template::render('homepage', [
+        Template::render('homeView', [
             'title'      => 'CyberLab - Accueil',
             'isLoggedIn' => SessionHelpers::isLogin(),
             'players'    => $players,

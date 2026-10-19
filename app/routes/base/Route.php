@@ -49,7 +49,7 @@ class Route
 
         // Si aucune route -> on affiche une page d'erreur 404
         http_response_code(404);
-        Template::render('error', [
+        Template::render('errorView', [
             'title' => 'CyberLab - Page non trouvée'
         ]);
     }

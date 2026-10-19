@@ -55,7 +55,7 @@ class Register
             }
         }
 
-        Template::render('register', [
+        Template::render('registerView', [
             'title'    => 'CyberLab - Inscription',
             'error'    => $error,
             'username' => $username,

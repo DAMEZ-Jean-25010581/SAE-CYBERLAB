@@ -35,7 +35,7 @@
             <div class="auth-header">
                 <h2 class="auth-subtitle">&gt; MODIFIER MON PSEUDO</h2>
             </div>
-            <form action="/account" method="post">
+            <form action="/index.php?action=account" method="post">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>">
                 <input type="hidden" name="form" value="username">
 
@@ -52,7 +52,7 @@
             <div class="auth-header">
                 <h2 class="auth-subtitle">&gt; MODIFIER MON EMAIL</h2>
             </div>
-            <form action="/account" method="post">
+            <form action="/index.php?action=account" method="post">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>">
                 <input type="hidden" name="form" value="email">
 
@@ -74,7 +74,7 @@
             <div class="auth-header">
                 <h2 class="auth-subtitle">&gt; MODIFIER MON MOT DE PASSE</h2>
             </div>
-            <form action="/account" method="post">
+            <form action="/index.php?action=account" method="post">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>">
                 <input type="hidden" name="form" value="password">
 
@@ -112,7 +112,7 @@
             <p class="auth-alert auth-alert-info">
                 Cette action est définitive : votre compte, vos points et votre progression seront supprimés.
             </p>
-            <form action="/account" method="post">
+            <form action="/index.php?action=account" method="post">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>">
                 <input type="hidden" name="form" value="delete">
 

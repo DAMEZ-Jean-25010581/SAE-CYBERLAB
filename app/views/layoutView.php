@@ -43,8 +43,8 @@
                         <li><a href="/"><img id="logo" src="/_assets/images/logo/CyberLab_logo.svg" alt="CyberLab Logo"></a></li>
                         <li><a class="header-link" href="/#levels">NIVEAUX</a></li>
                         <li><a class="header-link" href="/#ranking">CLASSEMENT</a></li>
-                        <li><a class="header-link" href="/a-propos">A PROPOS</a></li>
-                        <li><a class="header-link" href="/contact">CONTACT</a></li>
+                        <li><a class="header-link" href="index.php?action=a-propos">A PROPOS</a></li>
+                        <li><a class="header-link" href="index.php?action=contact">CONTACT</a></li>
                     </ul>
                 </li>
 
@@ -56,20 +56,20 @@
                         </span>
                     </li>
                     <li>
-                        <a href="/account" class="btn">MON COMPTE</a>
+                        <a href="index.php?action=account" class="btn">MON COMPTE</a>
                     </li>
                     <li>
-                        <form action="index.php?action=logout" method="post">
+                        <form action="/index.php?action=logout" method="post">
                             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\Utils\Csrf::generateToken(), ENT_QUOTES, 'UTF-8') ?>">
                             <button type="submit" class="btn">DÉCONNEXION</button>
                         </form>
                     </li>
                 <?php else: ?>
                     <li>
-                        <a href="index.php?action=login" class="btn">SE CONNECTER</a>
+                        <a href="/index.php?action=login" class="btn">SE CONNECTER</a>
                     </li>
                     <li>
-                        <a href="index.php?action=register" class="btn">S'INSCRIRE</a>
+                        <a href="/index.php?action=register" class="btn">S'INSCRIRE</a>
                     </li>
                 <?php endif; ?>
             </ul>
@@ -84,8 +84,8 @@
     <footer>
         <ul>
             <li><span>© 2026 CyberLab</span></li>
-            <li><span><a href="/plan-site">Plan du site</a></span></li>
-            <li><span><a href="/mentions-legales">Mentions légales</a></span></li>
+            <li><span><a href="index.php?action=plan-site">Plan du site</a></span></li>
+            <li><span><a href="index.php?action=mentions-legales">Mentions légales</a></span></li>
         </ul>
     </footer>
 </body>
